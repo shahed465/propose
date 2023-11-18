@@ -60,3 +60,20 @@ text-align: center;
 color: rgb(4, 255, 25);
 margin-top: 20px;
 }
+.last1 a{
+
+    font-size: 20px;
+  
+    text-decoration: none;
+ color: white;
+ padding: 5px;
+ margin: 5px 10px;
+ border: 3px solid #ddd;
+ border-radius: 10px;
+
+}
+.last1{
+margin-top: 30px;
+margin-left: 185px;
+
+}
