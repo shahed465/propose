@@ -1,0 +1,62 @@
+body{
+  background:rgba(0, 0, 0, 0.473) url(lv.jpg);
+  background-size: 450px;
+  background-blend-mode: darken;
+}
+.top{
+    
+border: 2px solid rgb(0, 153, 255);
+border-radius: 20px;
+text-align: center;
+color: white;
+
+background-color: rgb(216, 20, 200);
+}
+.yes h2{
+color: rgb(245, 245, 245);
+
+}    
+.yes{
+    border: 2px solid rgb(27, 226, 226);
+    border-radius: 20px;
+text-align: center;
+margin-top: 40px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.yes2{
+
+    border: 2px solid rgb(27, 226, 226);
+    border-radius: 20px;
+text-align: center;
+margin-top: 50px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.yes2 h2{
+
+    color: white;
+}
+
+
+.yes3{
+
+    border: 2px solid rgb(27, 226, 226);
+    border-radius: 20px;
+text-align: center;
+margin-top: 50px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+.yes3 h2{
+
+    color: white;
+}
+.last{
+    margin: top 20px;
+    border-radius: 20px;
+    border: 2px solid rgb(255, 166, 0);
+text-align: center;
+color: rgb(4, 255, 25);
+margin-top: 20px;
+}
