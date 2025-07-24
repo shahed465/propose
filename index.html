@@ -1,142 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>BDSMMXZ - Cheapest SMM Panel</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #fbe8df;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 50px;
-        }
-        header img {
-            height: 50px;
-        }
-        header nav a {
-            margin-left: 20px;
-            color: #000;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .hero {
-            text-align: center;
-            padding: 50px 20px;
-        }
-        .hero h1 {
-            font-size: 28px;
-        }
-        .hero span {
-            color: orange;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .login-box {
-            max-width: 400px;
-            margin: 30px auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px #ccc;
-        }
-        .login-box input {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .login-box button {
-            width: 100%;
-            background: orange;
-            color: #fff;
-            padding: 12px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .login-box small {
-            display: block;
-            text-align: right;
-            margin-bottom: 10px;
-        }
-        .login-box .remember {
-            margin-bottom: 10px;
-        }
-        .login-box p {
-            text-align: center;
-            margin-top: 10px;
-        }
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 50px;
-            padding: 40px 20px;
-            background: #f36b1f;
-            color: #fff;
-        }
-        .stat {
-            text-align: center;
-        }
-        .stat h2 {
-            margin: 0;
-            font-size: 32px;
-        }
-        .stat p {
-            margin: 5px 0 0;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Headphone Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    html {
+      scroll-behavior: smooth; /* Smooth scroll */
+    }
+    /* Header top styles */
+    .header-top {
+      display: flex;
+      justify-content: flex-end;
+      padding: 10px 20px;
+      background-color: #222;
+    }
+    .header-top a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      transition: color 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    .header-top a:not(:first-child) {
+      margin-left: 50px;
+    }
+    .header-top a:hover {
+      color: #07f5e5;
+    }
+    .header-top a span {
+      margin-left: 6px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    /* Basic styling for layout */
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #e0e1e4;
+      color: #333;
+    }
+    .hero {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+    .hero .btn {
+      background: #07f5e5;
+      color: #000;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 20px;
+      display: inline-block;
+      text-decoration: none;
+    }
+
+    .products {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .product-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .buy-btn {
+      display: inline-block;
+      margin-top: 10px;
+      background: #07f5e5;
+      color: black;
+      padding: 10px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .features {
+      background: #f5f5f5;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .feature-grid {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    .feature {
+      max-width: 250px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: white;
+    }
+    .socials a {
+      color: #07f5e5;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <img src="https://via.placeholder.com/150x50?text=bdSMMXZ" alt="Logo">
-    <nav>
-        <a href="#">Sign Up</a>
-        <a href="#">API</a>
-        <a href="#">Services</a>
-        <a href="#">Messenger Channel</a>
-    </nav>
-</header>
+  <!-- Top bar with Sign In and Sign Up -->
+  <div class="header-top">
+    <a href="signin.html">Sign In</a>
+    <a href="signup.html">Sign Up </a>
+    <a href="user.html">User logo </a>
+  </div>
 
-<section class="hero">
-    <h1>An SMM Panel Cheapest Services Provider Since 2020<br> - <span>BDSMMXZ.COM</span></h1>
-    <p><strong>BDSMMXZ</strong> Provide Best SMM Panels Services & Cheap SMM Panel Services In The World. All Social Media Platform Services We Have in Low Price.</p>
-</section>
+  <header class="hero">
+    <div class="container">
+      <h1>RXP PREMIUM HEADPHONES</h1>
+      <p>Experience sound like never before.</p>
+      <a href="#products" class="btn">Shop Now</a>
+    </div>
+  </header>
 
-<section class="login-box">
-    <form>
-        <input type="text" placeholder="Username">
-        <input type="password" placeholder="Password">
-        <small><a href="#">Forgot Password?</a></small>
-        <div class="remember">
-            <label><input type="checkbox"> Remember me</label>
-        </div>
-        <button type="submit">Sign in</button>
-        <p>Do not have an account? <a href="#">Sign up</a></p>
-    </form>
-</section>
+  <section id="products" class="products">
+    <h2>Our Products</h2>
+    <div class="product-grid">
 
-<section class="stats">
-    <div class="stat">
-        <h2>1914</h2>
-        <p>Total Services</p>
+      <div class="card">
+        <img src="images/headphone1.png" alt="Headphone 1">
+        <h3>Noise Cancelling Pro</h3>
+        <p>1450 TAKA</p>
+        <a href="buy.html" class="buy-btn">Buy Now</a>
+      </div>
+
+      <div class="card">
+        <img src="images/headphone2.png" alt="Headphone 2">
+        <h3>Studio Bass Boost</h3>
+        <p>1230 TAKA</p>
+        <a href="buy.html" class="buy-btn">Buy Now</a>
+      </div>
+
+      <div class="card">
+        <img src="images/headphone3.png" alt="Headphone 3">
+        <h3>Wireless Comfort</h3>
+        <p>2100 TAKA</p>
+        <a href="buy.html" class="buy-btn">Buy Now</a>
+      </div>
+
+      <!-- New 4 headphones added -->
+      <div class="card">
+        <img src="images/headphone1.png" alt="Headphone 4">
+        <h3>Ultra Bass Max</h3>
+        <p>1800 TAKA</p>
+        <a href="buy.html" class="buy-btn">Buy Now</a>
+      </div>
+
+      <div class="card">
+        <img src="images/headphone2.png" alt="Headphone 5">
+        <h3>Comfort Wireless Lite</h3>
+        <p>1950 TAKA</p>
+        <a href="buy.html" class="buy-btn">Buy Now</a>
+      </div>
+
+      <div class="card">
+        <img src="images/headphone3.png" alt="Headphone 6">
+        <h3>Studio Sound Elite</h3>
+        <p>2200 TAKA</p>
+        <a href="buy.html" class="buy-btn">Buy Now</a>
+      </div>
+
+      
+
     </div>
-    <div class="stat">
-        <h2>4145281</h2>
-        <p>Orders Completed</p>
+  </section>
+
+  <section class="features">
+    <h2>Why Choose Us?</h2>
+    <div class="feature-grid">
+      <div class="feature">
+        <h3>🎧 Superior Sound</h3>
+        <p>Crystal clear audio with deep bass.</p>
+      </div>
+      <div class="feature">
+        <h3>🔋 Long Battery Life</h3>
+        <p>Up to 40 hours on a single charge.</p>
+      </div>
+      <div class="feature">
+        <h3>🚚 Free Shipping</h3>
+        <p>On all orders over $50.</p>
+      </div>
     </div>
-    <div class="stat">
-        <h2>1233</h2>
-        <p>Tickets Solved</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Headphone Store. All rights reserved.</p>
+    <div class="socials">
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">Support</a>
     </div>
-</section>
+  </footer>
 
 </body>
 </html>
